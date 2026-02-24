@@ -11,7 +11,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    image: murali786786/mean-backend:v1
+    image: murali786786/mean-backend:latest
     container_name: mean-backend
     restart: always
     ports:
@@ -22,7 +22,7 @@ services:
       - MONGO_URL=mongodb://mongo:27017/meanapp
 
   frontend:
-    image: murali786786/mean-frontend:v1
+    image: murali786786/mean-frontend:latest
     container_name: mean-frontend
     restart: always
     depends_on:
